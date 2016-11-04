@@ -1,0 +1,5 @@
+alias start="git checkout slides/1"
+function next() {
+  current_branch=$(git name-rev --name-only HEAD)
+  git checkout "slides/$((${current_branch/slides\//} + 1))"
+}
