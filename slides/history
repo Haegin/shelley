@@ -1,0 +1,19 @@
+printf "%s\n" " , ,  ___,_, ___,_, ,_    ,  ,"
+printf "%s\n" " |_|,' | (_,' | / \,|_)   \_/ "
+printf "%s\n" "'| |  _|_,_)  |'\_/'| \  , /\` "
+printf "%s\n" " ' \` '   '    ' '   '  \`(_/   "
+
+mkdir animal vegetable mineral
+mkdir animal/{mammal,reptile,bird}
+
+touch animal/mammal/{human,cat,dog,horse,whale}
+touch animal/reptile/{snake,gecko,dinosaur}
+touch animal/bird/{eagle,hawk,sparrow}
+
+mkdir vegetable/tree
+touch vegetable/tree/{ash,oak,elm,beech,fir,"scots pine"}
+touch vegetable/{carrot,broccoli,"broad bean",peanut}
+
+touch mineral/{quartz,diamond,gold,silver,tin}
+
+tree animal vegetable mineral
