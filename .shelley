@@ -1,5 +1,7 @@
-alias start="git checkout slides/1"
+alias start="git checkout slides/intro"
 function next() {
-  current_branch=$(git name-rev --name-only HEAD)
-  git checkout "slides/$((${current_branch/slides\//} + 1))"
+  current_slide=$(git name-rev --name-only HEAD)
+  current_slide_index=$(grep -x -n ${name:t} slides/index | cut -d':' -f 1)
+  next_slide=$(head -n $(( $current_slide_index + 1 )) slides/index | tail -n 1)
+  git checkout "slides/${next_slide}"
 }
