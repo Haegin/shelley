@@ -1,7 +1,27 @@
-alias start="git checkout slides/intro"
+function start() {
+  [ -f .current_slide ] && rm .current_slide
+  echo "intro" > .current_slide
+  clear
+  source slides/intro
+}
+
 function next() {
-  current_slide=$(git name-rev --name-only HEAD)
-  current_slide_index=$(grep -x -n ${current_slide#slides/} slides/index | cut -d':' -f 1)
-  next_slide=$(head -n $(( $current_slide_index + 1 )) slides/index | tail -n 1)
-  git checkout "slides/${next_slide}"
+  current_slide=$(cat .current_slide)
+  current_slide_index=$(grep -x -n ${current_slide} slides/index | cut -d':' -f 1)
+  next_slide=$(head -n $(( ${current_slide_index} + 1 )) slides/index | tail -n 1)
+  rm .current_slide && echo "${next_slide}" > .current_slide
+
+  if [ -f "slides/${previous_slide}.cleanup" ]; then
+    source "slides/${previous_slide}.cleanup"
+  fi
+
+  clear
+  if [ -f "slides/${next_slide}" ]; then
+    source "slides/${next_slide}"
+  fi
+}
+
+function view() {
+  clear
+  source "slides/$1"
 }
