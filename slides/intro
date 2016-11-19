@@ -1,4 +1,4 @@
 echo
 echo
 echo
-cat $(dirname ${BASH_SOURCE[0]})/frankenstein
+cat $(dirname $0)/frankenstein
