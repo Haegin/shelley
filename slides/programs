@@ -1,6 +1,6 @@
 printf "%s\n" " ,_ ,_   _,  _,  ,_  _    , , _,"
 printf "%s\n" " |_)|_) / \,/ _  |_)'|\  |\/|(_,"
-printf "%s\n" "'| '| \'\_/'\_|`'| \ |-\ | \`| _)"
+printf "%s\n" "'| '| \'\_/'\_|\`'| \ |-\ | \`| _)"
 printf "%s\n" " '  '  \`'    _|  '  \`'  \`'  \`'"
 printf "%s\n" "            '"
 
@@ -14,3 +14,5 @@ echo " * head"
 echo " * tail"
 echo " * less"
 echo " * grep"
+echo " * tee"
+echo " * tr"
