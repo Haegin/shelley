@@ -1,0 +1,10 @@
+Month,Day,Holiday
+Jan,1,New Years Day
+Jan,25,Burns Night
+Feb,14,Valentine's Day
+Dec,25,Christmas Day
+Dec,26,Boxing Day
+Dec,24,Christmas Eve
+Dec,31,New Years Eve
+Oct,31,Halloween
+Nov,5,Bonfire Night
