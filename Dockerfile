@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     bash-completion \
     git \
     man \
+    python-pygments \
     tree \
     zsh \
  && rm -rf /var/lib/apt/lists/*
