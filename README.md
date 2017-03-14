@@ -1,10 +1,9 @@
 # Shelley
 ## Bring your shell to life
 
-### The basics
+    docker build -t haegin/shelley .
 
-* Return values ($?)
-* Boolean operations
+    docker run -it -v $(pwd):/home/harry haegin/shelley /bin/bash
 
 ### Useful Programs
 
@@ -32,36 +31,41 @@
 * Standard input, output and error
 * Pipes
 * Redirecting to files
-* Process substitution - diff holidays.txt <(sort -M holidays.txt)
+* Process substitution - `diff holidays.txt <(sort -M holidays.txt)`
 
 ### Using Your History
 
-* history
+* `history`
 * Ctrl+R
-* !!
-* !-1
-* !$ & !^
+* `!!`
+* `!34` && `!-1`
+* `!$` & `!^`
 
 #### Adding peas (The history command)
-- touch vegetable/legumes/pea
-- mkdir $(dirname !$)
-- history 5
-- !-3
+- `touch vegetable/legumes/pea`
+- `mkdir $(dirname !$)`
+- `history 5`
+- `!-3`
 
-#### Categorising other legumes (Expansion and Replacement)
-- mv vegetables/{"broad bean",legumes/}
-- ^"broad bean"^peanut
-- ls !$
+#### Categorisin  other legumes (Expansion and Replacement)
+- `mv vegetables/{"broad bean",legumes/}`
+- `^"broad bean"^peanut`
+- `ls !$`
 
 #### Adding more animals (Modifiers)
-- touch animal/mammal/bat
-- !!:gs/bat/mammoth
-- ls !$:h
+- `touch animal/mammal/bat`
+- `!!:gs/bat/mammoth`
+- `ls !$:h`
+
+### The basics
+
+* Return values (`$?`) and exit codes
+* Boolean operations
 
 ### ZSH is better
 
 * Globbing with ~
-* Safer redirections with >!
+* Safer redirections with `>!`
 * Esc+q
 * Better tab completion
 
