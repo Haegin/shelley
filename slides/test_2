@@ -1,0 +1,5 @@
+echo
+echo
+printf "\t\t$> grep *.js foo 2>errors | wc -l\n"
+echo
+echo

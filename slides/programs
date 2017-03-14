@@ -1,18 +1,20 @@
-printf "%s\n" " ,_ ,_   _,  _,  ,_  _    , , _,"
-printf "%s\n" " |_)|_) / \,/ _  |_)'|\  |\/|(_,"
-printf "%s\n" "'| '| \'\_/'\_|\`'| \ |-\ | \`| _)"
-printf "%s\n" " '  '  \`'    _|  '  \`'  \`'  \`'"
-printf "%s\n" "            '"
+echo
+printf "%s\n" " __   __   __   __   __              __   "
+printf "%s\n" "|__) |__) /  \ / _\` |__)  /\   |\/| /__\`  "
+printf "%s\n" "|    |  \ \__/ \__> |  \ /~~\  |  | .__/  "
+
+echo
 
 echo " * man"
 echo " * cut"
 echo " * sort"
 echo " * uniq"
-echo " * find"
-echo " * xargs"
 echo " * head"
 echo " * tail"
 echo " * less"
-echo " * grep"
 echo " * tee"
 echo " * tr"
+echo " * grep"
+echo " * find"
+echo " * xargs"
+echo

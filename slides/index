@@ -1,7 +1,12 @@
+title
 intro
+what
+test_1
+test_2
+test_3
 programs
-variables
 redirection
+variables
 history
 aliases
-git-aliases
+readline

@@ -1,0 +1,5 @@
+echo
+echo
+printf "\t\t$> cat *.js | wc -l\n"
+echo
+echo

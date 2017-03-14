@@ -1,7 +1,8 @@
-printf "%s\n" " , ,  ___,_, ___,_, ,_    ,  ,"
-printf "%s\n" " |_|,' | (_,' | / \,|_)   \_/ "
-printf "%s\n" "'| |  _|_,_)  |'\_/'| \  , /\` "
-printf "%s\n" " ' \` '   '    ' '   '  \`(_/   "
+echo
+printf "%s\n" "        __  ___  __   __       "
+printf "%s\n" "|__| | /__\`  |  /  \ |__) \ /  "
+printf "%s\n" "|  | | .__/  |  \__/ |  \  |    "
+echo
 
 mkdir animal vegetable mineral
 mkdir animal/{mammal,reptile,bird}
@@ -16,4 +17,4 @@ touch vegetable/{carrot,broccoli,"broad bean",peanut}
 
 touch mineral/{quartz,diamond,gold,silver,tin}
 
-tree animal vegetable mineral
+ls -R animal vegetable mineral

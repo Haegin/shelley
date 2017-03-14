@@ -1,0 +1,5 @@
+echo
+echo
+printf "\t\t$> cat foo bar <(wget http://baz.com) | grep qux -C1 > matches \n"
+echo
+echo

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo January
+echo February
+echo March
+echo May
+echo June
+(>&2 echo "An error occurred")
+echo July
+echo August
+(>&2 echo "An error occurred")
+echo September
+echo October
+echo November
+echo December

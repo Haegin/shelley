@@ -1,7 +1,9 @@
-printf "%s\n" " ,_   _,  ,_   ___, ,_   _, _,___,___,  _, ,  , "
-printf "%s\n" " |_) /_,  | \,' |   |_) /_,/ ' | ' |   / \,|\ | "
-printf "%s\n" "'| \'\_  _|_/  _|_,'| \'\_'\_  |  _|_,'\_/ |'\| "
-printf "%s\n" " '  \`  \`'     '     '  \`  \`  \` ' '     '   '  \` "
+echo
+printf "%s\n" " __   ___  __     __   ___  __  ___    __        "
+printf "%s\n" "|__) |__  |  \ | |__) |__  /  \`  |  | /  \ |\ |  "
+printf "%s\n" "|  \ |___ |__/ | |  \ |___ \__,  |  | \__/ | \|  "
+echo
 
+ln -s slides/bad_program bad_program
 cp slides/holidays.txt .
 

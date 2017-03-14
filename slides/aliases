@@ -1,4 +1,13 @@
-printf "%s\n" "  _   ,  ___,_    _,  _, _, "
-printf "%s\n" " '|\  | ' | '|\  (_, /_,(_, "
-printf "%s\n" "  |-\'|___|_,|-\  _)'\_  _) "
-printf "%s\n" "  '  \`  '    '  \`'     \`'   "
+echo
+printf "%s\n" "                  __   ___  __   "
+printf "%s\n" " /\  |    |  /\  /__\` |__  /__\`  "
+printf "%s\n" "/~~\ |___ | /~~\ .__/ |___ .__/  "
+echo
+
+pygmentize -g .bashrc | tail -n 7 | head -n 5
+
+echo
+
+pygmentize -l ini .gitconfig
+
+echo

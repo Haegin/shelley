@@ -1,8 +1,9 @@
 function start() {
   [ -f .current_slide ] && rm .current_slide
-  echo "intro" > .current_slide
+  first_slide=$(head -n1 slides/index)
+  echo ${first_slide} > .current_slide
   clear
-  source slides/intro
+  source slides/${first_slide}
 }
 
 function next() {
@@ -11,8 +12,8 @@ function next() {
   next_slide=$(head -n $(( ${current_slide_index} + 1 )) slides/index | tail -n 1)
   rm .current_slide && echo "${next_slide}" > .current_slide
 
-  if [ -f "slides/${previous_slide}.cleanup" ]; then
-    source "slides/${previous_slide}.cleanup"
+  if [ -f "slides/${current_slide}.cleanup" ]; then
+    source "slides/${current_slide}.cleanup"
   fi
 
   clear
@@ -21,7 +22,9 @@ function next() {
   fi
 }
 
+alias n=next
+
 function view() {
   clear
-  source "slides/$1"
+  source "slides/${1:-$(cat .current_slide)}"
 }

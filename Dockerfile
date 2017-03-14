@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     tree \
     zsh \
  && rm -rf /var/lib/apt/lists/*
-RUN useradd -m -d /home/victor -p password victor
-USER victor
-VOLUME /home/victor
-WORKDIR /home/victor
+RUN useradd -m -d /home/harry -p password harry
+USER harry
+VOLUME /home/harry
+WORKDIR /home/harry
