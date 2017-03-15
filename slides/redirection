@@ -4,6 +4,66 @@ printf "%s\n" "|__) |__  |  \ | |__) |__  /  \`  |  | /  \ |\ |  "
 printf "%s\n" "|  \ |___ |__/ | |  \ |___ \__,  |  | \__/ | \|  "
 echo
 
+unlink bad_program
 ln -s slides/bad_program bad_program
 cp slides/holidays.txt .
 
+echo; read
+
+clear; echo
+printf "%s\n" " __     __   ___  __  "
+printf "%s\n" "|__) | |__) |__  /__\`  "
+printf "%s\n" "|    | |    |___ .__/ "
+echo
+
+cmd "cat holidays.txt"
+echo
+
+cat holidays.txt | indent
+
+echo; read
+
+cmd "cat holidays.txt | sort -t, -k 2 -n"
+
+echo; read
+
+cat holidays.txt | sort -t, -k 2 -n | indent
+
+echo; read
+
+clear; echo
+printf "%s\n" " ___         ___     __   ___  __     __   ___  __  ___    __       "
+printf "%s\n" "|__  | |    |__     |__) |__  |  \ | |__) |__  /  \`  |  | /  \ |\ | "
+printf "%s\n" "|    | |___ |___    |  \ |___ |__/ | |  \ |___ \__,  |  | \__/ | \| "
+echo
+
+cmd "./bad_program"
+echo 
+./bad_program |& indent
+
+echo; read
+
+cmd "./bad_program > months"
+
+echo; read
+
+./bad_program 2>&1 > months | indent
+echo; read
+cmd "cat months"
+echo
+cat months | indent
+
+echo; read
+
+cmd "./bad_program 2> /dev/null > months"
+
+echo; read
+
+./bad_program 2> /dev/null > months
+echo
+cmd "cat months"
+echo
+cat months | indent
+
+read
+next

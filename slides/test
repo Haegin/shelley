@@ -1,0 +1,19 @@
+echo
+echo
+cmd "cat *.js | wc -l"
+echo
+
+read
+
+echo
+cmd "grep *.js foo 2> errors | wc -l"
+echo
+
+read
+
+echo
+cmd "cat foo{bar,baz} <(wget http://baz.com) | grep qux -C1 > matches"
+echo
+
+read
+next

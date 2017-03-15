@@ -26,6 +26,16 @@
 * $(())
 * ${foo/bar/baz}
 
+    $> echo $quote
+    Beware; for I am fearless, and therefore powerful.
+
+    $> echo ${quote/fearless/teh shell}
+    Beware; for I am teh shell, and therefore powerful.
+
+    $> ^teh^the
+    echo ${quote/fearless/the shell}
+    Beware; for I am the shell, and therefore powerful.
+
 ### Redirection
 
 * Standard input, output and error
@@ -47,7 +57,7 @@
 - `history 5`
 - `!-3`
 
-#### Categorisin  other legumes (Expansion and Replacement)
+#### Categorising other legumes (Expansion and Replacement)
 - `mv vegetables/{"broad bean",legumes/}`
 - `^"broad bean"^peanut`
 - `ls !$`

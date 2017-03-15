@@ -28,3 +28,19 @@ function view() {
   clear
   source "slides/${1:-$(cat .current_slide)}"
 }
+
+function title() {
+  echo
+  figlet -f resources/js-stick-letters.flf $@
+  echo
+}
+
+function indent {
+  while read line; do
+    printf "\t%s\n" "${line}"
+  done
+}
+
+function cmd {
+  echo "$> ${1}" | indent
+}

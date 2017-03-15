@@ -15,6 +15,5 @@ echo " * less"
 echo " * tee"
 echo " * tr"
 echo " * grep"
-echo " * find"
 echo " * xargs"
 echo
