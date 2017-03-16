@@ -1,1 +1,5 @@
-title Fin
+title The End
+
+echo Thanks for listening | indent
+
+read

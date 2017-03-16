@@ -1,10 +1,10 @@
 [alias]
-  co = checkout
-  st = status -s
-  cm = commit --verbose
-  lb = log --pretty=format:"%C(magenta)%h%C(red)%d\\ %C(reset)%s%C(blue)" --decorate master..HEAD
-  conflicts = diff --name-only --diff-filter=U
-  current-branch = name-rev --name-only HEAD
-  sha = rev-parse --verify HEAD
-  please = push --force-with-lease
-  expunge = !"git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d"
+co = checkout
+st = status -s
+cm = commit --verbose
+lb = log --pretty=format:"%C(magenta)%h%C(red)%d\\ %C(reset)%s%C(blue)" --decorate master..HEAD
+conflicts = diff --name-only --diff-filter=U
+current-branch = name-rev --name-only HEAD
+sha = rev-parse --verify HEAD
+please = push --force-with-lease
+expunge = !"git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d"

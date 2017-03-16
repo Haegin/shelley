@@ -61,9 +61,9 @@ diff holidays.txt <(sort -M holidays.txt) | indent
 
 read; clear; title summary
 
-read; echo; bullet Use pipes to pass standard output from one program to standard input of the next
-read; echo; bullet Use file redirection to read or write to files.
-read; echo; bullet File redirection can also redirect standard error
-read; echo; bullet Process redirection lets you treat the output from another process as a file
+read; echo; bullet Use pipes to pass stdout from one program to stdin of the next
+read; echo; bullet Use file redirection to write stdout to files
+read; echo; bullet File redirection can also redirect stderr
+read; echo; bullet Process redirection lets you treat the output from a process as a file
 
 read; next

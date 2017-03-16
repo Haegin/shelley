@@ -3,3 +3,5 @@ title further reading
 echo; bullet "The Bash FAQ - http://mywiki.wooledge.org/BashFAQ"
 echo; bullet "TLDP: The Advanced Bash-Scripting Guide - http://www.tldp.org/LDP/abs/html/"
 echo; bullet "ZSH docs: Expansion - http://zsh.sourceforge.net/Doc/Release/Expansion.html"
+
+read; next

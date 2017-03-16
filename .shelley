@@ -25,9 +25,11 @@ function next() {
 alias n=next
 
 function view() {
+  slide="${1:-$(cat .current_slide)}"
+  cleanup="slides/${slide}.cleanup"
+  echo "${slide}" > .current_slide
   clear
-  source "slides/${1:-$(cat .current_slide)}"
-  cleanup="slides/${1:-$(cat .current_slide)}.cleanup"
+  source "slides/${slide}"
   [[ -e "${cleanup}" ]] && source "${cleanup}"
 }
 
@@ -52,5 +54,5 @@ function eqv {
 }
 
 function bullet {
-  echo "* ${@}" | indent
+  echo -e "\e[0;37m*\e[1;37m ${@}" | indent
 }

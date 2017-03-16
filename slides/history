@@ -27,7 +27,7 @@ echo "... make more changes" | indent
 
 read; echo
 
-cmd "\e[1;93m!-2!\e[1;37m"
+cmd "\e[1;93m!-2\e[1;37m"
 eqv "run_tests some_test.rb --fail-fast"
 echo
 echo "running some_test.rb ..." | indent
@@ -64,7 +64,7 @@ eqv "run_test other_test.rb"
 echo
 echo "running other_test.rb ..." | indent
 
-clear; read; title Summary
+read; clear; title Summary
 
 read; echo; bullet !! reruns the last command
 read; echo; bullet !^ and !$ refer to the first and last arguments of the last command

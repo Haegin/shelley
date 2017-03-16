@@ -18,4 +18,4 @@ bullet Git also has aliases
 read; echo; bullet These are stored in the \~/.gitconfig file
 read; echo; pygmentize -l ini .gitconfig | indent ; echo -e "\e[1;37m"
 
-echo
+read; next

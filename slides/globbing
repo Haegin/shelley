@@ -2,15 +2,15 @@ title globbing and expansions
 
 read
 
-cmd "touch f \e[1;93m{foo,}{,bar}\e[1;37m barf brace"
+cmd "touch f fox \e[1;93m{foo,}{,bar}\e[1;37m barf brace"
 echo
 cmd "ls"
 echo
-echo "f foo bar foobar barf brace" | indent
+echo "bar barf brace f foo foobar fox" | indent
 
 read; echo; cmd "ls f\e[1;93m*\e[1;37m"
 echo
-echo "f foo foobar" | indent
+echo "f foo foobar fox" | indent
 
 read; echo; cmd "ls \e[1;93m?\e[1;37ma*"
 echo
@@ -18,10 +18,29 @@ echo "bar barf" | indent
 
 read; echo; cmd "ls f*\e[1;93m~\e[1;37m*bar"
 echo
-echo "f foo fred" | indent
+echo "f foo fox" | indent
+
+read; echo; cmd "ls fo\e[1;93m[ox]\e[1;37m"
+echo
+echo "foo fox" | indent
+
+read; echo; cmd "ls *\e[1;93m[^m-z]\e[1;37m"
+echo
+echo "barf brace f" | indent
 
 read; echo; cmd "echo \e[1;93m{1..10}\e[1;37m"
 echo
 echo {1..10} | indent
+
+read; clear; title Summary
+
+read; echo; bullet "Match 0 or more letters with *"
+read; echo; bullet "Match exactly one letter with ?"
+read; echo; bullet "Match one of a set of letters with [ab]"
+read; echo; bullet "Match one of a range of letters with [a-e]"
+read; echo; bullet "Invert a range or set with ^"
+read; echo; bullet "Use ~ to specify a pattern to exclude from matches"
+read; echo; bullet "Use brace expansion so you don't need to repeat yourself"
+read; echo; bullet "Brace expansion works with number ranges as well"
 
 read; next
