@@ -1,0 +1,27 @@
+title globbing and expansions
+
+read
+
+cmd "touch f \e[1;93m{foo,}{,bar}\e[1;37m barf brace"
+echo
+cmd "ls"
+echo
+echo "f foo bar foobar barf brace" | indent
+
+read; echo; cmd "ls f\e[1;93m*\e[1;37m"
+echo
+echo "f foo foobar" | indent
+
+read; echo; cmd "ls \e[1;93m?\e[1;37ma*"
+echo
+echo "bar barf" | indent
+
+read; echo; cmd "ls f*\e[1;93m~\e[1;37m*bar"
+echo
+echo "f foo fred" | indent
+
+read; echo; cmd "echo \e[1;93m{1..10}\e[1;37m"
+echo
+echo {1..10} | indent
+
+read; next
