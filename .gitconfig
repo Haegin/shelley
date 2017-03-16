@@ -2,7 +2,6 @@
   co = checkout
   st = status -s
   cm = commit --verbose
-  ls = log --graph --format=format:'%C(blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   lb = log --pretty=format:"%C(magenta)%h%C(red)%d\\ %C(reset)%s%C(blue)" --decorate master..HEAD
   conflicts = diff --name-only --diff-filter=U
   current-branch = name-rev --name-only HEAD

@@ -27,6 +27,8 @@ alias n=next
 function view() {
   clear
   source "slides/${1:-$(cat .current_slide)}"
+  cleanup="slides/${1:-$(cat .current_slide)}.cleanup"
+  [[ -e "${cleanup}" ]] && source "${cleanup}"
 }
 
 function title() {
@@ -42,5 +44,13 @@ function indent {
 }
 
 function cmd {
-  echo "$> ${1}" | indent
+  echo -e "\e[0;34m$>\e[1;37m ${@}" | indent
+}
+
+function eqv {
+  echo -e "\e[0;36m=>\e[1;37m ${@}" | indent
+}
+
+function bullet {
+  echo "* ${@}" | indent
 }

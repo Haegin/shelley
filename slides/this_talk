@@ -1,3 +1,9 @@
 title "this talk"
 
+read; echo
+bullet Focus on using the shell interactively.
+
+read; echo
+bullet You can also use the shell for scripting. This is not that talk.
+
 read; next

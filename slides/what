@@ -1,9 +1,9 @@
-# echo
-# printf "%s\n" "               ___       __     ___       ___     __        ___           __  "
-# printf "%s\n" "|  | |__|  /\   |     | /__\`     |  |__| |__     /__\` |__| |__  |    |     _| "
-# printf "%s\n" "|/\| |  | /~~\  |     | .__/     |  |  | |___    .__/ |  | |___ |___ |___  .   "
-# echo
-
 title "what is the shell?"
+
+read; echo
+bullet Command Line Interpreter (CLI)
+
+read; echo
+bullet Runs automatically when you open a terminal
 
 read; next

@@ -1,13 +1,21 @@
-echo
-printf "%s\n" "                  __   ___  __   "
-printf "%s\n" " /\  |    |  /\  /__\` |__  /__\`  "
-printf "%s\n" "/~~\ |___ | /~~\ .__/ |___ .__/  "
-echo
+title aliases
 
-pygmentize -g .bashrc | tail -n 7 | head -n 5
+echo; read; bullet Aliases let you set your own abbreviations
 
-echo
+echo; read; bullet Add these to \~/.bashrc to make them available in every shell
 
-pygmentize -l ini .gitconfig
+echo; read; bullet Can be used for shortcuts
+
+echo; pygmentize -g .bashrc | tail -n 7 | head -n 3 | indent ; echo -e "\e[1;37m"
+
+read; bullet And to correct common typos
+
+echo; pygmentize -g .bashrc | tail -n 4 | head -n 2 | indent ; echo -e "\e[1;37m"
+
+read; clear; title git aliases
+
+bullet Git also has aliases
+read; echo; bullet These are stored in the \~/.gitconfig file
+read; echo; pygmentize -l ini .gitconfig | indent ; echo -e "\e[1;37m"
 
 echo

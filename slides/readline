@@ -1,10 +1,15 @@
-echo
-printf "%s\n" " __   ___       __               ___  "
-printf "%s\n" "|__) |__   /\  |  \ |    | |\ | |__   "
-printf "%s\n" "|  \ |___ /~~\ |__/ |___ | | \| |___  "
-echo
+title readline
 
+echo; read
+bullet "Alt+B & Alt+F to navigate by word"
 
+echo; read
+bullet "Ctrl+A & Ctrl+E to move to the start or end of a line"
 
+echo; read
+bullet "Alt+Bksp & Alt+D to delete words"
 
+echo; read
+bullet "Ctrl+U & Ctrl+K to kill parts of the line"
 
+read; next

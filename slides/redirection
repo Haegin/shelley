@@ -1,20 +1,11 @@
-echo
-printf "%s\n" " __   ___  __     __   ___  __  ___    __        "
-printf "%s\n" "|__) |__  |  \ | |__) |__  /  \`  |  | /  \ |\ |  "
-printf "%s\n" "|  \ |___ |__/ | |  \ |___ \__,  |  | \__/ | \|  "
-echo
+title redirection
 
-unlink bad_program
-ln -s slides/bad_program bad_program
+[[ ! -e bad_program ]] && ln -s slides/bad_program bad_program
 cp slides/holidays.txt .
 
 echo; read
 
-clear; echo
-printf "%s\n" " __     __   ___  __  "
-printf "%s\n" "|__) | |__) |__  /__\`  "
-printf "%s\n" "|    | |    |___ .__/ "
-echo
+clear; title pipes
 
 cmd "cat holidays.txt"
 echo
@@ -23,7 +14,7 @@ cat holidays.txt | indent
 
 echo; read
 
-cmd "cat holidays.txt | sort -t, -k 2 -n"
+cmd "cat holidays.txt \e[1;93m|\e[1;37m sort -t, -k 2 -n"
 
 echo; read
 
@@ -31,11 +22,7 @@ cat holidays.txt | sort -t, -k 2 -n | indent
 
 echo; read
 
-clear; echo
-printf "%s\n" " ___         ___     __   ___  __     __   ___  __  ___    __       "
-printf "%s\n" "|__  | |    |__     |__) |__  |  \ | |__) |__  /  \`  |  | /  \ |\ | "
-printf "%s\n" "|    | |___ |___    |  \ |___ |__/ | |  \ |___ \__,  |  | \__/ | \| "
-echo
+clear; title file redirection
 
 cmd "./bad_program"
 echo 
@@ -43,7 +30,7 @@ echo
 
 echo; read
 
-cmd "./bad_program > months"
+cmd "./bad_program \e[1;93m>\e[1;37m months"
 
 echo; read
 
@@ -55,7 +42,7 @@ cat months | indent
 
 echo; read
 
-cmd "./bad_program 2> /dev/null > months"
+cmd "./bad_program \e[1;93m2>\e[1;37m /dev/null > months"
 
 echo; read
 
@@ -65,5 +52,18 @@ cmd "cat months"
 echo
 cat months | indent
 
+read; clear; title process redirection
+
+cmd 'diff holidays.txt \e[1;93m<(\e[1;37msort -M holidays.txt\e[1;93m)\e[1;37m'
+echo
 read
-next
+diff holidays.txt <(sort -M holidays.txt) | indent
+
+read; clear; title summary
+
+read; echo; bullet Use pipes to pass standard output from one program to standard input of the next
+read; echo; bullet Use file redirection to read or write to files.
+read; echo; bullet File redirection can also redirect standard error
+read; echo; bullet Process redirection lets you treat the output from another process as a file
+
+read; next

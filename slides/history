@@ -1,20 +1,75 @@
+title history
+
+read
+
+cmd '$EDITOR some_test.rb'
 echo
-printf "%s\n" "        __  ___  __   __       "
-printf "%s\n" "|__| | /__\`  |  /  \ |__) \ /  "
-printf "%s\n" "|  | | .__/  |  \__/ |  \  |    "
+echo "... edit the file" | indent
 echo
+cmd "run_tests \e[1;93m!$\e[1;37m"
+eqv "run_tests some_test.rb"
+echo
+echo "running some_test.rb ..." | indent
 
-mkdir animal vegetable mineral
-mkdir animal/{mammal,reptile,bird}
+read; echo
 
-touch animal/mammal/{human,cat,dog,horse,whale}
-touch animal/reptile/{snake,gecko,dinosaur}
-touch animal/bird/{eagle,hawk,sparrow}
+cmd "\e[1;93m!!\e[1;37m --fail-fast"
+eqv "run_tests some_test.rb --fail-fast"
+echo
+echo "running some_test.rb ..." | indent
 
-mkdir vegetable/tree
-touch vegetable/tree/{ash,oak,elm,beech,fir,"scots pine"}
-touch vegetable/{carrot,broccoli,"broad bean",peanut}
+read; echo
 
-touch mineral/{quartz,diamond,gold,silver,tin}
+cmd '$EDITOR \e[1;93m!^\e[1;37m'
+eqv '$EDITOR some_test.rb'
+echo
+echo "... make more changes" | indent
 
-ls -R animal vegetable mineral
+read; echo
+
+cmd "\e[1;93m!-2!\e[1;37m"
+eqv "run_tests some_test.rb --fail-fast"
+echo
+echo "running some_test.rb ..." | indent
+
+read; clear; title history; echo
+
+cmd "\e[1;93m[Ctrl+R]\e[1;37m"
+
+echo -en "\t(reverse-i-search)\`':"
+read -s
+echo -en "\r\t(reverse-i-search)\`rai': bundle exec rails server"
+
+read; echo
+
+cmd "\e[1;93mhistory 5\e[1;37m"
+echo
+echo "14  run_tests some_test.rb" | indent
+echo "15  run_tests some_test.rb --fail-fast" | indent
+echo "16  vim some_test.rb" | indent
+echo "17  run_tests some_test.rb --fail-fast" | indent
+echo "18  bundle exec rails server" | indent
+
+read; echo
+
+cmd "\e[1;93m!14\e[1;37m"
+eqv "run_tests some_test.rb"
+echo
+echo "running some_test.rb ..." | indent
+
+read; echo
+
+cmd "\e[1;93m^some^other\e[1;37m"
+eqv "run_test other_test.rb"
+echo
+echo "running other_test.rb ..." | indent
+
+clear; read; title Summary
+
+read; echo; bullet !! reruns the last command
+read; echo; bullet !^ and !$ refer to the first and last arguments of the last command
+read; echo; bullet You can go further back in history using !n or !-n
+read; echo; bullet You can search backwards using Ctrl+R
+read; echo; bullet You can change the previous command using ^find^replace
+
+read; next
