@@ -1,102 +1,21 @@
 # Shelley
 ## Bring your shell to life
 
+To run the slideshow
+
     docker build -t haegin/shelley .
 
     docker run -it -v $(pwd):/home/harry haegin/shelley /bin/bash
 
-### Useful Programs
+Hit enter to advance between slides.
 
-* grep (ripgrep)
-* less
-* tee
-* head/tail
-* cut
-* sort
-* uniq
-* find
-* xargs
-* tee
-* tr
+To exit, hit Ctrl+C.
 
-### Variables & Substitution
+To view a particular slide, use `view slidename`. If you don't give a slide
+name it'll use the slide you were on before you hit Ctrl+C.
 
-* ${}
-* $()
-* $(())
-* ${foo/bar/baz}
+### Further Reading
 
-    $> echo $quote
-    Beware; for I am fearless, and therefore powerful.
-
-    $> echo ${quote/fearless/teh shell}
-    Beware; for I am teh shell, and therefore powerful.
-
-    $> ^teh^the
-    echo ${quote/fearless/the shell}
-    Beware; for I am the shell, and therefore powerful.
-
-### Redirection
-
-* Standard input, output and error
-* Pipes
-* Redirecting to files
-* Process substitution - `diff holidays.txt <(sort -M holidays.txt)`
-
-### Using Your History
-
-* `history`
-* Ctrl+R
-* `!!`
-* `!34` && `!-1`
-* `!$` & `!^`
-
-#### Adding peas (The history command)
-- `touch vegetable/legumes/pea`
-- `mkdir $(dirname !$)`
-- `history 5`
-- `!-3`
-
-#### Categorising other legumes (Expansion and Replacement)
-- `mv vegetables/{"broad bean",legumes/}`
-- `^"broad bean"^peanut`
-- `ls !$`
-
-#### Adding more animals (Modifiers)
-- `touch animal/mammal/bat`
-- `!!:gs/bat/mammoth`
-- `ls !$:h`
-
-### The basics
-
-* Return values (`$?`) and exit codes
-* Boolean operations
-
-### ZSH is better
-
-* Globbing with ~
-* Safer redirections with `>!`
-* Esc+q
-* Better tab completion
-
-### Globbing
-
-* * and **
-* ?
-* [...] and [^...]
-
-### Aliases
-
-* really easy way to add power to your shell.
-* there are some limitations - you can't use variable substitution because it's
-  evaluated at the time the alias is created.
-
-### Git
-
-* similar, but automatically prefixed with `git`.
-
-### Functions
-
-* more powerful than aliases as you can use variable substitution.
-
-### 
+[The Bash FAQ](http://mywiki.wooledge.org/BashFAQ)
+[TLDP: The Advanced Bash-Scripting Guide](http://www.tldp.org/LDP/abs/html/)
+[ZSH docs: Expansion](http://zsh.sourceforge.net/Doc/Release/Expansion.html)

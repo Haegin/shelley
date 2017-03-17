@@ -1,9 +1,0 @@
-title "what is the shell?"
-
-read; echo
-bullet Command Line Interpreter (CLI)
-
-read; echo
-bullet Runs automatically when you open a terminal
-
-read; next

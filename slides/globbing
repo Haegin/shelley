@@ -32,6 +32,10 @@ read; echo; cmd "echo \e[1;93m{1..10}\e[1;37m"
 echo
 echo {1..10} | indent
 
+read; echo; cmd '$EDITOR \e[1;93m$(\e[1;37mgrep -lr foo .\e[1;93m)\e[1;37m'
+echo
+echo "... edit all the files with foo in them" | indent
+
 read; clear; title Summary
 
 read; echo; bullet "Match 0 or more letters with *"
@@ -42,5 +46,6 @@ read; echo; bullet "Invert a range or set with ^"
 read; echo; bullet "Use ~ to specify a pattern to exclude from matches"
 read; echo; bullet "Use brace expansion so you don't need to repeat yourself"
 read; echo; bullet "Brace expansion works with number ranges as well"
+read; echo; bullet "Command expansion lets you use the output of one command inside another"
 
 read; next

@@ -3,7 +3,7 @@ title not covered
 read; echo; bullet Variables and their expansion options
 read; echo; bullet Arithmetic in the shell
 read; echo; bullet Lots of the more complicated history expansions
-read; echo; bullet And lots of the globbing options available
+read; echo; bullet Extended globbing options
 read; echo; bullet Functions
 read; echo; bullet "All the other shells that aren't Bash"
 read; echo; bullet And so much more...

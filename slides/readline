@@ -12,4 +12,14 @@ bullet "Alt+Bksp & Alt+D to delete words"
 echo; read
 bullet "Ctrl+U & Ctrl+K to kill parts of the line"
 
+echo; read
+bullet "Tab completion (not readline, but it's used while typing a command)"
+
+echo
+echo -en "\t\e[0;34m$>\e[1;37m ls /h\e[1;93m⇥\e[1;37m                     "
+read -s
+echo -en "\r\t\e[0;34m$>\e[1;37m ls \e[4m/home/\e[24m                     "
+
+read
+
 read; next

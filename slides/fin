@@ -1,5 +1,7 @@
 title The End
 
 echo Thanks for listening | indent
+echo
+echo Thanks Devhub for hosting | indent
 
 read

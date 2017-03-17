@@ -1,4 +1,0 @@
-current_slide=$(cat .current_slide)
-current_slide_index=$(grep -x -n ${current_slide} slides/index | cut -d':' -f 1)
-next_slide=$(head -n $(( ${current_slide_index} + 1 )) slides/index | tail -n 1)
-
